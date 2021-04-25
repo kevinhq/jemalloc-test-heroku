@@ -17,7 +17,7 @@ end
 before_fork do
   require 'puma_worker_killer'
   PumaWorkerKiller.config do |config|
-    config.ram           = 1024 # mb
+    config.ram           = 4096 # mb
     config.frequency     = 1    # seconds
     config.percent_usage = 1
     config.rolling_restart_frequency = false
